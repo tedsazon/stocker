@@ -1,7 +1,10 @@
-require "stocker/version"
-require "open-uri"
+require_relative "./stocker/version"
+require_relative './stocker/cli'
+#require "open-uri"
+#require "pry"
 
-class stocker
+=begin
+ class Stocker
 
   def self.scrape_page(index_url)
     index_page = Nokogiri::HTML(open(index_url))
@@ -21,3 +24,4 @@ class stocker
     sneaker = {}
     sneaker_page = Nokogiri::HTML(open(sneaker_url))
     links = profile_page.css("")
+=end
