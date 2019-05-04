@@ -1,5 +1,6 @@
 require_relative "./stocker/version"
 require_relative './stocker/cli'
+require_relative "./stocker/stock"
 #require "open-uri"
 #require "pry"
 
