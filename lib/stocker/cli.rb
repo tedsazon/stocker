@@ -17,12 +17,9 @@ class Stocker::CLI
     while input != "exit"
       puts "Select a number or type stock to see them again or type exit."
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "Item 1 DESC"
-      when "2"
-        puts "Item 2 DESC"
-      when "stock"
+      if input.to_i > 0
+        puts @stock[input.to_i -1]
+      elsif input == "stock"
         stock_up
       else
         puts "Say it again?"

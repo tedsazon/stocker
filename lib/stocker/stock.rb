@@ -1,6 +1,8 @@
 class Stocker::Stock
 
-attr_accessor :name, :price, :availability, :link
+attr_accessor :make, :model, :ask, :last_update, :link
+
+@@all = []
 
   def self.now
     #returns instances of stock
