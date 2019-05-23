@@ -12,8 +12,21 @@ attr_accessor :make, :model, :ask, :last_update, :link
     DOC
   end
 
+  def initialize(make=nil, model=nil, ask=nil, last_update=nil, link=nil)
+    @make = make
+    @model = model
+    @ask = ask
+    @last_update = last_update
+    @link = link
+    @@all << self
+  end
 
+  def self.all
+    @@all
+  end
 
-
+  def doc
+    @doc ||= Nokogiri::HTML(open(self.url))
+  end
 
 end

@@ -1,3 +1,9 @@
+module Stocker
+end
+
+require_relative '../config/stadium'
+
+=begin
 require_relative "./stocker/version"
 require_relative './stocker/cli'
 require_relative "./stocker/stock"
